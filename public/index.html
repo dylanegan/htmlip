@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML IP</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript">
+      $.ajax({
+        url: 'http://jsonip.com/htmlip',
+        dataType: 'jsonp',
+        jsonpCallback: 'htmlip',
+        success: function(data) {
+          $('body').html(data.ip);
+        }
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
